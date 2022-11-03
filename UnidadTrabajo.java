@@ -16,20 +16,16 @@ public class UnidadTrabajo {
      */
     public UnidadTrabajo(String nombre, int dia, int mes, int year, int peso,
                          int controles, int actividades, int proyectos) {
-       //TODO
+       nombre = this.nombre;
+       pesoUnidad = peso;
+       dia = 0;
+       mes = 0;
+       year = 0;
+       controles = 0;
+       actividades = 0;
+       proyectos = 0;
        
        
-    }
-
-    /**
-     * Constructor 2
-     */
-    public UnidadTrabajo(String nombre, Fecha fechaFin, int peso,
-                         PonderacionInstrumentos ponderacion) {
-        this.nombre = nombre;
-        this.fechaFin = fechaFin;
-        this.pesoUnidad = peso;
-        this.ponderacion = ponderacion;
     }
 
     /**
@@ -93,10 +89,7 @@ public class UnidadTrabajo {
      * que la recibida como parámetro
      */
     public boolean anteriorA(UnidadTrabajo unidad) {
-        //TODO
-        
-        
-        return true;
+        return fechaFin.antesQue(unidad.getFechaFin());
     }
 
     /**
