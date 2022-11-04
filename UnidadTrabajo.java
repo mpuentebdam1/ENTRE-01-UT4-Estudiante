@@ -18,7 +18,7 @@ public class UnidadTrabajo {
                          int controles, int actividades, int proyectos) {
        this.nombre = nombre;
        this.pesoUnidad = peso;
-       this.fechaFin = new Fecha(dia, mes, year);
+       fechaFin = new Fecha(dia, mes, year);
        controles = controles;
        actividades = 0;
        proyectos = 0;
@@ -96,7 +96,7 @@ public class UnidadTrabajo {
      * Se clonan también los objetos que incluya
      */
     public UnidadTrabajo clonar(UnidadTrabajo unidadActual) {
-        UnidadTrabajo unidadClon = new UnidadTrabajo;
+        UnidadTrabajo unidadClon = unidadActual;
         return unidadClon;
     }
 
@@ -119,6 +119,4 @@ public class UnidadTrabajo {
 
     }
 
-
-     
 }
