@@ -82,29 +82,22 @@ public class NotaEstudianteUnidad {
      * en cuenta la ponderación de los instrumentos de evaluación
      */
     public double calcularNotaUnidad() {
-         PonderacionInstrumentos ponderacion = new PonderacionInstrumentos(this.controles, 
-         this.actividades, this.proyectos);
-         double controlesPonderado = notaControles * ponderacion.getControles();
-         double actividadesPonderado = notaActividades * ponderacion.getActividades();
-         double proyectosPonderado = notaProyectos * ponderacion.getProyectos();
-         double notaUnidad = controlesPonderado + actividadesPonderado + 
-         proyectosPonderado;
-         
-         
+         PonderacionInstrumentos ponderacion = unidad.getPonderacion();
+         double controlesPonderado = (notaControles * ponderacion.getControles()) / 100;
+         double actividadesPonderado = (notaActividades * ponderacion.getActividades()) / 100;
+         double proyectosPonderado = (notaProyectos * ponderacion.getProyectos()) / 100;
+         double notaUnidad = controlesPonderado + actividadesPonderado + proyectosPonderado;
          return notaUnidad;
-
-
     }
 
     /**
      * Representación textual del objeto (ver enunciado)
      */
     public String toString() {
-        //TODO
+        String str;
+        str = "";
         
-        
-        
-        return null;
+        return str;
     }
 
     /**
